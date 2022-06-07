@@ -1,0 +1,69 @@
+{
+  "name": "سورس كوبرا",
+  "logo": "https://telegra.ph/file/bb36322c9de65156bd04e.jpg",
+  "description": "A SuperFast VC Player bot to play songs in Telegram Video Chat. Powered by PyTgCalls.",
+  "keywords": ["music", "voicechat", "telegram", "fallen"],
+  "repository": "https://github.com/ERTWF/UUOUU",
+  "stack": "container",
+  "env": {
+    "SESSION_NAME": {
+      "description": "ضع كود بايروجرام حبيبي",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "ضع توكن بوتك يا قلبي",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "معرف بوتك بدون @",
+      "required": false,
+      "value": ""
+    },
+    "BOT_USERNAME": {
+      "description": " مره تانيه معرف بوتك بدون @",
+      "required": false,
+      "value": ""
+    },
+    "API_ID": {
+      "description": "ايبي ايدي ضع هنا my.telegram.org/apps",
+      "required": false
+    },
+    "API_HASH": {
+      "description": "ايبي هاش ضع هنا my.telegram.org/apps",
+      "required": false
+    },
+    "OWNER_USERNAME": {
+      "description": "معرفك كمطور البوت بدون @",
+      "required": false,
+      "value": "QABNADLIB"
+    },
+    "SUPPORT_GROUP": {
+      "description": "معرف كروبك بدون @",
+      "required": false,
+      "value": "faqek"
+    },
+    "SUDO_USERS": {
+      "description": "ضع ايديك ياغالي.",
+      "required": true,
+      "value": ""
+    },
+    "START_IMG": {
+      "description": "ضع صورة البوت",
+      "required": false
+    },
+    "PING_IMG": {
+      "description": "ضع صورة البوت مره تانيه",
+      "required": false
+    },
+    "PMPERMIT": {
+      "description": "عوفها لاتلعب بيها",
+      "required": false,
+      "value": "ENABLE"
+    },
+    "DURATION_LIMIT": {
+      "description": "هم عوفها لاتلعب بشي تحياتي لك المبرمج سيف كوبرا",
+      "required": false,
+      "value": "90"
+    }
+  }
+}
