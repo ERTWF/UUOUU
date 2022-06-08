@@ -15,12 +15,12 @@
       "required": true
     },
     "BOT_NAME": {
-      "description": "معرف بوتك بدون @",
+      "description": "معرف بوتك مره تانيه بدون @",
       "required": false,
       "value": ""
     },
     "BOT_USERNAME": {
-      "description": " مره تانيه معرف بوتك بدون @",
+      "description": " معرف بوتك بدون @",
       "required": false,
       "value": ""
     },
