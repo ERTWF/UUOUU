@@ -32,7 +32,7 @@
       "description": "ايبي هاش ضع هنا my.telegram.org/apps",
       "required": false
     },
-    "OWNER_NAME": {
+    "OWNER_USERNAME": {
       "description": "معرفك كمطور البوت بدون @",
       "required": false,
       "value": "QABNADLIB"
