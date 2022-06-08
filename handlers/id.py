@@ -6,7 +6,7 @@ from helpers.filters import command
 from helpers.get_file_id import get_file_id
 
 
-@Client.on_message(command(["id", "stickerid", "stkid", "stckrid", f"id@{BOT_USERNAME}"]))
+@Client.on_message(command(["ايدي", "stickerid", "stkid", "stckrid", f"ايدي@{BOT_USERNAME}"]))
 async def showid(_, message: Message):
     await message.delete()
     chat_type = message.chat.type
@@ -25,7 +25,7 @@ async def showid(_, message: Message):
             )
             file_info = get_file_id(message.reply_to_message)
         else:
-            _id += "<b>ᴜsᴇʀ ɪᴅ</b>: " f"<code>{message.from_user.id}</code>\n"
+            _id += "<b>ايديك</b>: " f"<code>{message.from_user.id}</code>\n"
             file_info = get_file_id(message)
         if file_info:
             _id += (
