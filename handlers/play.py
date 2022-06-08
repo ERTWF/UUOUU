@@ -43,7 +43,7 @@ def time_to_seconds(time):
 
 
 @Client.on_message(
-    command(["play", "yt", "ytplay"])
+    command(["تشغيل", "شغ", "شغل"])
     & filters.group
     & ~filters.edited
     & ~filters.forwarded
@@ -55,7 +55,7 @@ async def play(_, message: Message):
 
     await message.delete()
 
-    fallen = await message.reply("ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%")
+    fallen = await message.reply("جاري البحث\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%")
 
     chumtiya = message.from_user.mention
 
@@ -94,7 +94,7 @@ async def play(_, message: Message):
         await USER.get_chat(chid)
     except Exception as e:
         await fallen.edit(
-            f"<i>» ᴀssɪsᴛᴀɴᴛ ғᴀɪʟᴇᴅ ᴛᴏ ᴊᴏɪɴ ᴛʜɪs ᴄʜᴀᴛ.</i>\n\nʀᴇᴀsᴏɴ : {e}")
+            f"<i>» تعذر التشغيل تأكد ان حساب المساعد داخل الدردشة.</i>\n\nʀᴇᴀsᴏɴ : {e}")
         return
     
     audio = (
@@ -155,7 +155,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await fallen.edit(
-                "» ɢɪᴠᴇ ᴍᴇ ᴍᴜsɪᴄ ɴᴀᴍᴇ ᴛᴏ ᴘʟᴀʏ"
+                "عليك كتابة اسم الاغنيه او الرد ع ملف صوتي"
             )
         await fallen.edit("⚡")
         query = message.text.split(None, 1)[1]
@@ -200,14 +200,14 @@ async def play(_, message: Message):
     if int(chat_id) in ACTV_CALLS:
         position = await queues.put(chat_id, file=file_path)
         await message.reply_text(
-            text=f"**» ᴛʀᴀᴄᴋ ǫᴜᴇᴜᴇᴅ ᴀᴛ {position} **\n📌 **ᴛɪᴛʟᴇ​ :**[{title[:65]}]({url})\n\n🕕** ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` **ᴍɪɴᴜᴛᴇs**\n💕** ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​ : **{chumtiya}",
+               text=f"**ㅤㅤㅤ» تم التشغيل يغالي «**\n📌 **الاسم​:** [{title[:65]}]({url})\n🕕 **عدد دقائق:** `{duration}` الاغنية\n💕 **مطلوبة بواسطة​:** {chumtiya}\n💔 **الدردشة​:** `{message.chat.title}`\n🎥 **نوع التشغيل:** موسيقى\n",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton("• كروب الدعم •", url=f"https://t.me/{SUPPORT_GROUP}"),
                     InlineKeyboardButton("• قناة البوت •", url=f"https://t.me/VFF35")
                 ],
-                [InlineKeyboardButton("» ᴄʟᴏsᴇ «", callback_data="close_play")
+                [InlineKeyboardButton("» اخفاء الكليشه «", callback_data="close_play")
                 ],
             ]
         ),
@@ -225,14 +225,14 @@ async def play(_, message: Message):
             )
 
         await message.reply_text(
-            text=f"**ㅤㅤㅤ» ɴᴏᴡ ᴘʟᴀʏɪɴɢ «**\n📌 **ᴛɪᴛʟᴇ​:** [{title[:65]}]({url})\n🕕 **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}` ᴍɪɴᴜᴛᴇs\n💕 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​:** {chumtiya}\n💔 **ᴘʟᴀʏɪɴɢ ɪɴ​:** `{message.chat.title}`\n🎥 **sᴛʀᴇᴀᴍ ᴛʏᴘᴇ:** ʏᴏᴜᴛᴜʙᴇ ᴍᴜsɪᴄ\n",
+            text=f"**ㅤㅤㅤ» تم التشغيل يغالي «**\n📌 **الاسم​:** [{title[:65]}]({url})\n🕕 **عدد دقائق:** `{duration}` الاغنية\n💕 **مطلوبة بواسطة​:** {chumtiya}\n💔 **الدردشة​:** `{message.chat.title}`\n🎥 **نوع التشغيل:** موسيقى\n",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton("• كروب الدعم •", url=f"https://t.me/{SUPPORT_GROUP}"),
                     InlineKeyboardButton("• قناة البوت •", url=f"https://t.me/VFF35")
                 ],
-                [InlineKeyboardButton("» ᴄʟᴏsᴇ «", callback_data="close_play")
+                [InlineKeyboardButton("» اخفاء الكليشه «", callback_data="close_play")
                 ],
             ]
         ),

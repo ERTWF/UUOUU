@@ -34,7 +34,7 @@ async def start_(client: Client, message: Message):
                         "• الاوامر •", url=f"https://telegra.ph/%F0%9D%99%B2%E1%B4%8F%E1%B4%8D%E1%B4%8D%E1%B4%80%C9%B4%E1%B4%85s-04-06"
                     ),
                     InlineKeyboardButton(
-                        "• مطور السورس •", url="https://t.me/QABNADLIB"
+                        "• مطور البوت •", url="https://t.me/{OWNER_NAME}"
                     )]
             ]
        ),
